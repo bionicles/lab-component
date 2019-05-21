@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    height: 88vh;
+}
+
+.left {
+    background-color: bisque;
+    border: 3px solid black;
+    flex: 1.618;
+}
+
+.right {
+    background-color: grey;
+    border: 3px solid silver;
+    flex: 1;
+}
+
+#lab {
+    height: 100%;
+    width: 100%;
+}
+
+.jp-ApplicationShell {
+    position: relative !important;
+    min-height: 100%;
+}

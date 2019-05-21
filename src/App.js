@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import "./style.css"
 
 const startJupyterLab = () => {
   require("font-awesome/css/font-awesome.min.css");
@@ -36,11 +37,10 @@ const startJupyterLab = () => {
   var lab = new JupyterLab({
     name: "JupyterLab Example",
     namespace: "lab-example",
-    version: require("../package.json").version,
-    hostId: "lab"
+    version: require("../package.json").version
   });
   lab.registerPluginModules(mods);
-  lab.start().then(() => {
+  lab.start({hostID: "lab"}).then(() => {
     // eslint-disable-next-line
     console.log("Example started!");
   });
@@ -51,7 +51,12 @@ const App = () => {
   return (
     <div className="App">
       <h1>Test</h1>
-      <div id="lab" />
+      <div class="row">
+        <div class="left column" />
+        <div class="right column">
+          <div id="lab" />
+        </div>
+      </div>
     </div>
   );
 }
