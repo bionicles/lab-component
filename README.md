@@ -1,6 +1,6 @@
 issues:
-1. npm version of jupyterlab doesnt match github master branch (make sure to study local code not github code)
-2. unclear how to pass options.paths.urls.baseUrl to JupyterLab constructor and unclear if the constructor actually uses it
+1. npm version of jupyterlab doesnt match github master branch
+2. unclear how to pass options.paths.urls.baseUrl to JupyterLab constructor and unclear if the constructor even uses it
 3. unclear how to modularize jupyterlab front end from jupyterlab server.
 4. unclear how to sync react state with jupyterlab
 5. unclear exactly why the current bug arises
