@@ -23,6 +23,27 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- <script id='jupyter-config-data' type="application/json">{
+      {% for key, value in page_config.items() -%}
+      "{{ key }}": "{{ value }}",
+      {% endfor -%}
+      "baseUrl": "{{base_url}}",
+      "wsUrl": "{{ws_url}}"
+      }</script> -->
+    
+    <script type="text/javascript">
+      /* Remove token from URL. */
+      
+      // (function () {
+      //   var parsedUrl = new URL(window.location.href);
+      //   console.log("index.html jupyter-config-data", document.getElementById("jupyter-config-data"))
+      //   console.log("index.html parsedUrl", parsedUrl)
+      //   if (parsedUrl.searchParams.get('token')) {
+      //     parsedUrl.searchParams.delete('token');
+      //     window.history.replaceState({}, '', parsedUrl.href);
+      //   }
+      // })();
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.

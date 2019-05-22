@@ -37,7 +37,12 @@ const startJupyterLab = () => {
   var lab = new JupyterLab({
     name: "JupyterLab Example",
     namespace: "lab-example",
-    version: require("../package.json").version
+    version: require("../package.json").version,
+    paths: {
+      urls: {
+        baseUrl: "localhost:8888"
+      }
+    }
   });
   lab.registerPluginModules(mods);
   lab.start({hostID: "lab"}).then(() => {
@@ -51,9 +56,9 @@ const App = () => {
   return (
     <div className="App">
       <h1>Test</h1>
-      <div class="row">
-        <div class="left column" />
-        <div class="right column">
+      <div className="row">
+        <div className="left column" />
+        <div className="right column">
           <div id="lab" />
         </div>
       </div>
